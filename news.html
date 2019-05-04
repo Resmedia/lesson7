@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Lesson 7, News</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/main.css?_v3">
+</head>
+<body>
+<h1>JS Lesson 7, News</h1>
+<h2>Evgenii Rogozhuk</h2>
+<div id="container">
+    <h3 class="text-center">
+        Новости с https://newsapi.org подгрузка на AJAX по клику на кнопку в конце
+    </h3>
+    <div class="text-center">
+        <a class="btn btn-success" href="./index.html">
+            &leftarrow; Вернуться к заданию
+        </a>
+    </div>
+    <div id="news"></div>
+    <div class="btn-box text-center">
+        <div id="loader"></div>
+        <button class="btn btn-success" id="button">
+            Еще новости
+        </button>
+    </div>
+</div>
+<script>
+    $('#button').on('click', () => NewsLoader.loadMore());
+</script>
+</body>
+</html>
